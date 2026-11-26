@@ -7,7 +7,7 @@ import {
   AuthStackParamList,
   TenantStackParamList,
   CaretakerStackParamList,
-} from './types';
+} from './type';
 import { UserRole } from '../types/domain';
 
 const RootStack = createNativeStackNavigator<RootStackParamList>();
