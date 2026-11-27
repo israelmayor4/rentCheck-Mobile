@@ -7,6 +7,7 @@ import type {
 import { InviteLandingScreen } from '../screens/InviteLandingScreen';
 import { CompleteProfileScreen } from '../screens/CompleteProfileScreen';
 import { VerifyIdentityScreen } from '../screens/VerifyIdentityScreen';
+import { TenancyReviewScreen } from '../screens/TenancyReviewScreen';
 import { TenancyActivatedScreen } from '../screens/TenancyActivatedScreen';
 import { SignInScreen } from '../screens/SignInScreen';
 
@@ -43,6 +44,9 @@ export function AuthOnboardingNavigator({
         initialParams={{ invitation }}
       />
       <Stack.Screen
+        name="SignIn"
+        component={SignInScreen} />
+      <Stack.Screen
         name="CompleteProfile"
         component={CompleteProfileScreen}
       />
@@ -50,13 +54,12 @@ export function AuthOnboardingNavigator({
         name="VerifyIdentity"
         component={VerifyIdentityScreen}
       />
+      <Stack.Screen name="TenancyReview" component={TenancyReviewScreen} />
       <Stack.Screen
         name="TenancyActivated"
         component={TenancyActivatedScreen}
       />
-      <Stack.Screen
-        name="SignIn"
-        component={SignInScreen} />
+
     </Stack.Navigator>
   );
 }

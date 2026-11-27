@@ -83,7 +83,10 @@ export function VerifyIdentityScreen({ navigation, route }: Props) {
             return;
         }
         setStatusNotice('');
-        navigation.navigate('TenancyActivated', { invitation, profile });
+        navigation.navigate('TenancyReview', {
+            invitation,
+            profile,
+        });
     };
 
     return (
