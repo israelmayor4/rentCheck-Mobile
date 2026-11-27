@@ -8,6 +8,7 @@ import { InviteLandingScreen } from '../screens/InviteLandingScreen';
 import { CompleteProfileScreen } from '../screens/CompleteProfileScreen';
 import { VerifyIdentityScreen } from '../screens/VerifyIdentityScreen';
 import { TenancyActivatedScreen } from '../screens/TenancyActivatedScreen';
+import { SignInScreen } from '../screens/SignInScreen';
 
 const Stack = createNativeStackNavigator<AuthOnboardingStackParamList>();
 
@@ -53,6 +54,9 @@ export function AuthOnboardingNavigator({
         name="TenancyActivated"
         component={TenancyActivatedScreen}
       />
+      <Stack.Screen
+        name="SignIn"
+        component={SignInScreen} />
     </Stack.Navigator>
   );
 }

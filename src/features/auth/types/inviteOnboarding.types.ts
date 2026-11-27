@@ -44,4 +44,7 @@ export type AuthOnboardingStackParamList = {
     invitation: InvitationDetails;
     profile: TenantProfileFormData;
   };
+  SignIn: {
+    invitation?: InvitationDetails;
+  } | undefined;
 };

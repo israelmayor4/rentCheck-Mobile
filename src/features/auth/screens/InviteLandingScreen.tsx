@@ -133,9 +133,7 @@ export function InviteLandingScreen({ navigation, route }: Props) {
 
                 <Pressable
                     style={styles.signInLinkRow}
-                    onPress={() => {
-                        // Navigate to existing Sign In screen in auth stack
-                    }}
+                    onPress={() => navigation.navigate('SignIn', { invitation })}
                 >
                     <Text style={styles.signInMuted}>
                         Already have a RentCheck account?{' '}
