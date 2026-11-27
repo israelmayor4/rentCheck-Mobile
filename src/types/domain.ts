@@ -6,14 +6,23 @@ export interface CaretakerPermissions {
   canUpdateOccupancy: boolean;
 }
 
-export interface User {
+interface BaseUser {
   id: string;
   fullName: string;
   email: string;
   phone?: string;
-  role: UserRole;
-  permissions?: CaretakerPermissions;
 }
+
+export interface TenantUser extends BaseUser {
+  role: 'TENANT';
+}
+
+export interface CaretakerUser extends BaseUser {
+  role: 'CARETAKER';
+  permissions: CaretakerPermissions;
+}
+
+export type User = TenantUser | CaretakerUser;
 
 export interface PropertyUnit {
   id: string;
